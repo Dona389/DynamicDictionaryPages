@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZwT-bB-1ca">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Viewcontroller" id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicDictionaryPages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-xv-UeD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoDisplayCell" rowHeight="121" id="oKa-Pg-6Bg" customClass="InfoDetailTableViewCell" customModule="DynamicDictionaryPages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="121"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oKa-Pg-6Bg" id="CyJ-0q-ba7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kk-pW-cnM">
+                                                    <rect key="frame" x="20" y="34" width="354" height="53"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0kk-pW-cnM" firstAttribute="top" secondItem="CyJ-0q-ba7" secondAttribute="topMargin" constant="23" id="Hfy-xk-seB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0kk-pW-cnM" secondAttribute="trailing" constant="20" id="PND-Dp-w2I"/>
+                                                <constraint firstItem="0kk-pW-cnM" firstAttribute="leading" secondItem="CyJ-0q-ba7" secondAttribute="leadingMargin" id="c4h-ap-SkW"/>
+                                                <constraint firstItem="0kk-pW-cnM" firstAttribute="centerY" secondItem="CyJ-0q-ba7" secondAttribute="centerY" id="e4R-Ud-o5p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="0kk-pW-cnM" id="aDW-QN-pHu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FTw-Jl-PbD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yHx-hZ-rgL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6UL-xv-UeD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VDo-aY-W1O"/>
+                            <constraint firstItem="6UL-xv-UeD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W63-VU-4zb"/>
+                            <constraint firstItem="6UL-xv-UeD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t2x-Zt-VKk"/>
+                            <constraint firstItem="6UL-xv-UeD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uib-Fi-kQv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BVQ-Nt-Wu8"/>
+                    <connections>
+                        <outlet property="InfoDisplayTableView" destination="6UL-xv-UeD" id="kQw-8v-J16"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bJV-6y-MwI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZwT-bB-1ca" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SMU-Rz-BFb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XDd-bN-vBb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tnS-7A-LIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>
